@@ -13,3 +13,6 @@
 .bottomContainer {
   display: flex;
 }
+.bottomContainer a {
+  text-decoration: none;
+}

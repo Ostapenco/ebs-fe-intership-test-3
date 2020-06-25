@@ -45,7 +45,8 @@ function MainComponent() {
             day.dt_txt.split(' ')[0] === neededDate
         );
 
-        setDailyForecast(newArray)
+        return setDailyForecast(newArray),
+            setIsHomePageOpen(false)
     }
 
     const getIcon = (code) => {
@@ -59,7 +60,7 @@ function MainComponent() {
     // const adjustSmallIcons = (type) => setIconClass(type)
 
     const handleHourlyClick = () => {
-        return setIsHomePageOpen(false), setDailyForecast(handleClick(weatherData[0]));
+        return setIsHomePageOpen(false), handleClick(weatherData[0]);
     }
 
     console.log("MainComponent -> dailyForecast", dailyForecast)
@@ -100,6 +101,7 @@ function MainComponent() {
                                     handleCardClick={handleClick}
                                     getIcon={getIcon}
                                     getSmallIcons={getSmallIcons}
+                                    handleHourlyClick={handleHourlyClick}
                                 />
                             </Route>
                             <Route path="/dailyForecast">

@@ -24,7 +24,6 @@ function SingleDayForecast({ dailyForecast, getIcon, adjustSmallIcons }) {
 
     return (
         <div className='innerContainer'>
-
             <div className='bottomContainer'>
                 {dailyForecast.map(day =>
                     <Hour
