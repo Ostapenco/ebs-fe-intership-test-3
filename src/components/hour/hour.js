@@ -2,7 +2,7 @@ import React from 'react'
 
 import './hour.css';
 
-function Hour({ day, temp, weather, icon, data, handleCardClick }) {
+function Hour({ day, temp, weather, icon }) {
 
     return (
         <div className='hourContainer'>

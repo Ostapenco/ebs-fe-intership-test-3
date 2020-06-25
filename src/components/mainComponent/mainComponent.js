@@ -54,13 +54,17 @@ function MainComponent() {
         return <img src={imgUrl} alt='icon' />
     }
 
-    const getSmallIcons = (dataArray) => dataArray.map(day => <div key={day.dt}>{getIcon(day.weather[0].icon)}</div>)
+    const getSmallIcons = (dataArray) => dataArray.map(day =>
+        isHomePageOpen ?
+            <Link to="/dailyForecast" onClick={() => handleClick(day)} key={day.dt}>
+                <div>{getIcon(day.weather[0].icon)}</div>
+            </Link>
+            :
+            <div key={day.dt}>{getIcon(day.weather[0].icon)}</div>)
 
     const handleHourlyClick = () => {
         return setIsHomePageOpen(false), handleClick(weatherData[0]);
     }
-
-    console.log("MainComponent -> dailyForecast", dailyForecast)
 
     return (
         <Router>

@@ -3,7 +3,7 @@ import React from 'react';
 import './days.css';
 import Day from '../day/day'
 
-function Days({ weatherData, handleCardClick, getIcon, handleHourlyClick }) {
+function Days({ weatherData, handleCardClick, getIcon }) {
 
     const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 

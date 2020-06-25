@@ -3,10 +3,7 @@ import React from 'react';
 import './singleDayForecast.css';
 import Hour from '../hour/hour'
 
-function SingleDayForecast({ dailyForecast, getIcon, adjustSmallIcons }) {
-    console.log("SingleDayForecast -> dailyForecast", dailyForecast)
-
-
+function SingleDayForecast({ dailyForecast, getIcon }) {
     const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
     const getDayTime = (timestamp, dateTime) => {
@@ -14,9 +11,13 @@ function SingleDayForecast({ dailyForecast, getIcon, adjustSmallIcons }) {
         const fullDate = new Date(timestamp * 1000 - 1);
         const day = weekDays[fullDate.getDay()];
         const date = dateTime.split(' ')[0];
-        const time = dateTime.split(' ')[1];
+        const time = dateTime.split(' ')[1].slice(0, 5);
 
-        return `${date}, ${day} ${time}`;
+        return <div>
+            <span>{date}, {day}</span><br />
+            <br />
+            <span className='hour'>{time}</span>
+        </div>
     }
 
     const getCelsius = (valNum) => {
