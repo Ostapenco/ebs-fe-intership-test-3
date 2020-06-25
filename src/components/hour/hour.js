@@ -6,7 +6,7 @@ function Hour({ day, temp, weather, icon, data, handleCardClick }) {
 
     return (
         <div className='hourContainer'>
-            <h4>{day}</h4>
+            <h5>{day}</h5>
             {icon}
             <p>{temp}, {weather}</p>
         </div>

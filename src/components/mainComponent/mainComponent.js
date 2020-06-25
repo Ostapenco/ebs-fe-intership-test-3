@@ -14,7 +14,6 @@ import './mainComponent.css';
 
 
 function MainComponent() {
-    // const [openDay, setOpenDay] = useState();
     const [loading, setLoading] = useState(true);
     const [weatherData, setWeatherData] = useState([]);
     const [allData, setAllData] = useState([]);
@@ -56,8 +55,6 @@ function MainComponent() {
     }
 
     const getSmallIcons = (dataArray) => dataArray.map(day => <div key={day.dt}>{getIcon(day.weather[0].icon)}</div>)
-
-    // const adjustSmallIcons = (type) => setIconClass(type)
 
     const handleHourlyClick = () => {
         return setIsHomePageOpen(false), handleClick(weatherData[0]);
