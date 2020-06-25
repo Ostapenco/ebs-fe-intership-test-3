@@ -1,0 +1,15 @@
+.topContainer {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 0 5rem 0;
+}
+.topContainer h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.bottomContainer {
+  display: flex;
+}

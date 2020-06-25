@@ -1,0 +1,35 @@
+.bottomContainer {
+  display: flex;
+}
+
+.topContainer {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 0 5rem 0;
+}
+.topContainer h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.smallIcons {
+  display: flex;
+  justify-content: center;
+}
+
+.smallIcons img {
+  height: 3rem;
+  width: 3rem;
+}
+.smallIcons div {
+  background: rgb(24, 122, 104);
+  margin: 1px;
+  border-radius: 10px;
+}
+
+.smallIcons div:hover {
+  box-shadow: 0 0 15px 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,33 @@
+.dayContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(132, 226, 212);
+  height: 10rem;
+  width: 12rem;
+  border-radius: 5px;
+  margin: 2rem;
+  padding: 2rem 1.2rem;
+  box-shadow: 0 0 15px 5px;
+  align-items: center;
+}
+
+.dayContainer h4 {
+  text-shadow: 0 3px 3px black;
+  color: #fff;
+}
+.dayContainer p {
+  color: rgb(18, 79, 68);
+  font-weight: 800;
+}
+.dayContainer:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.5s;
+  transform: scale(1.05);
+}
+
+.dayContainer img {
+  height: 7rem;
+  width: 7rem;
+}

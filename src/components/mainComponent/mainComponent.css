@@ -1,0 +1,71 @@
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  align-items: center;
+  padding: 3rem 0 5rem 0;
+}
+.headerContainer h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+.headerContainer ul {
+  display: flex;
+  list-style-type: none;
+  margin-top: 1.5rem;
+}
+.headerContainer ul a {
+  color: #fff;
+  margin: 1rem;
+}
+.headerContainer ul a:hover {
+  color: orange;
+}
+
+.outerContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.smallIcons5Days,
+.smallIconsDaily {
+  display: flex;
+  justify-content: center;
+}
+
+/* .smallIconsDaily {
+  display: flex;
+  justify-content: center;
+} */
+
+.smallIcons5Days div,
+.smallIconsDaily div {
+  background: rgb(24, 122, 104);
+  margin: 1px;
+}
+
+/* .smallIconsDaily div {
+  background: rgb(24, 122, 104);
+  margin: 1px;
+} */
+
+.smallIcons5Days img {
+  height: 3rem;
+  width: 3rem;
+}
+.smallIcons5Days div {
+  border-radius: 10px;
+}
+
+.smallIconsDaily img {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.smallIconsDaily div {
+  border-radius: 40px;
+}
+
+.smallIcons5Days div:hover {
+  box-shadow: 0 0 15px 5px;
+  cursor: pointer;
+}
