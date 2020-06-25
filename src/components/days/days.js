@@ -3,11 +3,7 @@ import React from 'react';
 import './days.css';
 import Day from '../day/day'
 
-function Days({ weatherData, allData, handleCardClick, getIcon, adjustSmallIcons }) {
-
-    // const newData = allData.filter(day =>
-    //     day.dt_txt.split(' ')[0] === '2020-06-25'
-    // );
+function Days({ weatherData, allData, handleCardClick, getIcon }) {
 
     const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
