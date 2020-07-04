@@ -33,39 +33,28 @@
   justify-content: center;
 }
 
-/* .smallIconsDaily {
-  display: flex;
-  justify-content: center;
-} */
-
-.smallIcons5Days div,
-.smallIconsDaily div {
+.smallIcons5Days div {
+  border-radius: 10px;
   background: rgb(24, 122, 104);
   margin: 1px;
 }
 
-/* .smallIconsDaily div {
-  background: rgb(24, 122, 104);
-  margin: 1px;
-} */
+.smallIconsDaily div {
+  border-radius: 40px;
+  background: rgb(28, 172, 151);
+  margin: 0.9px;
+}
 
 .smallIcons5Days img {
   height: 3rem;
   width: 3rem;
 }
-.smallIcons5Days div {
-  border-radius: 10px;
-}
-
 .smallIconsDaily img {
   height: 2.5rem;
   width: 2.5rem;
 }
-.smallIconsDaily div {
-  border-radius: 40px;
-}
 
 .smallIcons5Days div:hover {
-  box-shadow: 0 0 15px 5px;
+  box-shadow: 0 0 15px 5px #fff;
   cursor: pointer;
 }

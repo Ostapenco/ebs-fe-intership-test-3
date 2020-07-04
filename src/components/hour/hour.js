@@ -2,11 +2,11 @@ import React from 'react'
 
 import './hour.css';
 
-function Hour({ day, temp, weather, icon, data, handleCardClick }) {
+function Hour({ day, temp, weather, icon }) {
 
     return (
-        <div className='hourContainer' onClick={() => handleCardClick(data)}>
-            <h4>{day}</h4>
+        <div className='hourContainer'>
+            <h5>{day}</h5>
             {icon}
             <p>{temp}, {weather}</p>
         </div>

@@ -14,7 +14,6 @@ import './mainComponent.css';
 
 
 function MainComponent() {
-    // const [openDay, setOpenDay] = useState();
     const [loading, setLoading] = useState(true);
     const [weatherData, setWeatherData] = useState([]);
     const [allData, setAllData] = useState([]);
@@ -45,7 +44,8 @@ function MainComponent() {
             day.dt_txt.split(' ')[0] === neededDate
         );
 
-        setDailyForecast(newArray)
+        return setDailyForecast(newArray),
+            setIsHomePageOpen(false)
     }
 
     const getIcon = (code) => {
@@ -54,15 +54,17 @@ function MainComponent() {
         return <img src={imgUrl} alt='icon' />
     }
 
-    const getSmallIcons = (dataArray) => dataArray.map(day => <div key={day.dt}>{getIcon(day.weather[0].icon)}</div>)
-
-    // const adjustSmallIcons = (type) => setIconClass(type)
+    const getSmallIcons = (dataArray) => dataArray.map(day =>
+        isHomePageOpen ?
+            <Link to="/dailyForecast" onClick={() => handleClick(day)} key={day.dt}>
+                <div>{getIcon(day.weather[0].icon)}</div>
+            </Link>
+            :
+            <div key={day.dt}>{getIcon(day.weather[0].icon)}</div>)
 
     const handleHourlyClick = () => {
-        return setIsHomePageOpen(false), setDailyForecast(handleClick(weatherData[0]));
+        return setIsHomePageOpen(false), handleClick(weatherData[0]);
     }
-
-    console.log("MainComponent -> dailyForecast", dailyForecast)
 
     return (
         <Router>
@@ -100,6 +102,7 @@ function MainComponent() {
                                     handleCardClick={handleClick}
                                     getIcon={getIcon}
                                     getSmallIcons={getSmallIcons}
+                                    handleHourlyClick={handleHourlyClick}
                                 />
                             </Route>
                             <Route path="/dailyForecast">

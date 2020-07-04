@@ -3,7 +3,7 @@ import React from 'react';
 import './days.css';
 import Day from '../day/day'
 
-function Days({ weatherData, allData, handleCardClick, getIcon }) {
+function Days({ weatherData, handleCardClick, getIcon }) {
 
     const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
@@ -20,14 +20,6 @@ function Days({ weatherData, allData, handleCardClick, getIcon }) {
         return `${(valNum - 273.15).toFixed(0)} C`;
     }
 
-    /*
-     <div className='topContainer'>
-         <div className='smallIcons'>
-             {adjustSmallIcons('5days')}
-         </div>
-     </div>
-      */
-
     return (
         <div className='innerContainer'>
             <div className='bottomContainer'>
@@ -40,9 +32,10 @@ function Days({ weatherData, allData, handleCardClick, getIcon }) {
                         icon={getIcon(day.weather[0].icon)}
                         data={day}
                         handleCardClick={handleCardClick}
-                    />)}
+                    />
+                )}
             </div>
-        </div>
+        </div >
     )
 }
 
